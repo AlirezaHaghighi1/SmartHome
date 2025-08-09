@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Smart Home Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <button class="menu-toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 12H21M3 6H21M3 18H21"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+          <div class="logo">
+            <svg
+              width="200px"
+              height="200px"
+              enable-background="new 0 0 297 297"
+              fill="#8892b0"
+              stroke="#fff"
+              version="1.1"
+              viewBox="0 0 297 297"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m241.49 182.76-86.032-76.683c-3.961-3.532-9.941-3.531-13.901-1e-3l-86.039 76.683c-2.225 1.982-3.496 4.82-3.496 7.8v95.998c0 5.77 4.678 10.447 10.446 10.447h172.07c5.769 0 10.446-4.678 10.446-10.447v-95.998c2.8422e-14 -2.98-1.272-5.817-3.496-7.799zm-17.398 93.349h-151.18v-80.868l75.592-67.371 75.586 67.371v80.868z"
+              />
+              <path
+                d="m94.944 90.969c14.306-14.307 33.326-22.185 53.557-22.185 20.23 0 39.251 7.878 53.557 22.185 2.04 2.04 4.713 3.059 7.387 3.059 2.673 0 5.347-1.02 7.388-3.059 4.08-4.079 4.08-10.694 0-14.775-18.252-18.252-42.519-28.304-68.331-28.304-25.813 0-50.079 10.052-68.331 28.304-4.08 4.08-4.08 10.695 0 14.775 4.08 4.079 10.693 4.079 14.773 0z"
+              />
+              <path
+                d="m250.7 42.33c-27.297-27.297-63.591-42.33-102.19-42.33s-74.899 15.033-102.2 42.33c-4.079 4.08-4.079 10.695 0 14.775 2.041 2.039 4.714 3.06 7.388 3.06s5.347-1.021 7.388-3.06c23.351-23.353 54.397-36.212 87.42-36.212s64.069 12.859 87.419 36.212c4.081 4.078 10.694 4.08 14.775 0 4.079-4.08 4.079-10.695 0-14.775z"
+              />
+            </svg>
+            <span>Smart Home</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <button class="header-btn">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="3"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M19.4 15A1.65 1.65 0 0 0 21 13.09A1.65 1.65 0 0 0 19.4 9"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+          <button class="header-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <polyline
+                points="22,6 12,13 2,6"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+          <button class="header-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M18 8A6 6 0 0 0 6 8C6 7 6 3 6 3S6 7 6 8A6 6 0 0 0 18 8Z"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M13.73 21A2 2 0 0 1 12 22A2 2 0 0 1 10.27 21"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+          <div class="user-menu">
+            <span>Username</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <polyline
+                points="6,9 12,15 18,9"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </div>
+      </header>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="user-profile">
+          <div class="avatar">
+            <img src="./assets/images/smarthome-user.jpg" alt="My Home" />
+          </div>
+          <div class="user-info">
+            <h3>My Home</h3>
+            <p>9808 Trent Bypass Suite 541</p>
+          </div>
+        </div>
+        <nav class="nav-menu">
+          <a href="#" class="nav-item active">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 9L12 2L21 9V20A2 2 0 0 1 19 22H5A2 2 0 0 1 3 20V9Z"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <polyline
+                points="9,22 9,12 15,12 15,22"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+            Overview
+          </a>
+          <a href="#" class="nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect
+                x="2"
+                y="3"
+                width="20"
+                height="14"
+                rx="2"
+                ry="2"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <line
+                x1="8"
+                y1="21"
+                x2="16"
+                y2="21"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <line
+                x1="12"
+                y1="17"
+                x2="12"
+                y2="21"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+            Devices
+          </a>
+          <a href="#" class="nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <polyline
+                points="22,12 18,12 15,21 9,3 6,12 2,12"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+            Analytics
+          </a>
+          <a href="#" class="nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 12L11 14L15 10"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+            Rules
+          </a>
+          <a href="#" class="nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect
+                x="3"
+                y="3"
+                width="18"
+                height="18"
+                rx="2"
+                ry="2"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <circle
+                cx="8.5"
+                cy="8.5"
+                r="1.5"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <polyline
+                points="21,15 16,10 5,21"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+            Gallery
+          </a>
+          <a href="#" class="nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <polyline
+                points="12,6 12,12 16,14"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+            History
+          </a>
+          <a href="#" class="nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle
+                cx="12"
+                cy="12"
+                r="3"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M19.4 15A1.65 1.65 0 0 0 21 13.09A1.65 1.65 0 0 0 19.4 9"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M4.6 9A1.65 1.65 0 0 0 3 10.91A1.65 1.65 0 0 0 4.6 15"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+            Settings
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="content-header">
+          <h1>Overview</h1>
+          <button class="settings-btn">
+            <svg
+              viewBox="0 0 1024 1024"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#8892b0"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  fill="#8892b0"
+                  d="M600.704 64a32 32 0 0 1 30.464 22.208l35.2 109.376c14.784 7.232 28.928 15.36 42.432 24.512l112.384-24.192a32 32 0 0 1 34.432 15.36L944.32 364.8a32 32 0 0 1-4.032 37.504l-77.12 85.12a357.12 357.12 0 0 1 0 49.024l77.12 85.248a32 32 0 0 1 4.032 37.504l-88.704 153.6a32 32 0 0 1-34.432 15.296L708.8 803.904c-13.44 9.088-27.648 17.28-42.368 24.512l-35.264 109.376A32 32 0 0 1 600.704 960H423.296a32 32 0 0 1-30.464-22.208L357.696 828.48a351.616 351.616 0 0 1-42.56-24.64l-112.32 24.256a32 32 0 0 1-34.432-15.36L79.68 659.2a32 32 0 0 1 4.032-37.504l77.12-85.248a357.12 357.12 0 0 1 0-48.896l-77.12-85.248A32 32 0 0 1 79.68 364.8l88.704-153.6a32 32 0 0 1 34.432-15.296l112.32 24.256c13.568-9.152 27.776-17.408 42.56-24.64l35.2-109.312A32 32 0 0 1 423.232 64H600.64zm-23.424 64H446.72l-36.352 113.088-24.512 11.968a294.113 294.113 0 0 0-34.816 20.096l-22.656 15.36-116.224-25.088-65.28 113.152 79.68 88.192-1.92 27.136a293.12 293.12 0 0 0 0 40.192l1.92 27.136-79.808 88.192 65.344 113.152 116.224-25.024 22.656 15.296a294.113 294.113 0 0 0 34.816 20.096l24.512 11.968L446.72 896h130.688l36.48-113.152 24.448-11.904a288.282 288.282 0 0 0 34.752-20.096l22.592-15.296 116.288 25.024 65.28-113.152-79.744-88.192 1.92-27.136a293.12 293.12 0 0 0 0-40.256l-1.92-27.136 79.808-88.128-65.344-113.152-116.288 24.96-22.592-15.232a287.616 287.616 0 0 0-34.752-20.096l-24.448-11.904L577.344 128zM512 320a192 192 0 1 1 0 384 192 192 0 0 1 0-384zm0 64a128 128 0 1 0 0 256 128 128 0 0 0 0-256z"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </div>
+
+        <div class="dashboard-grid">
+          <!-- Camera Section -->
+          <div class="camera-section">
+            <div class="section-header">
+              <h2>Camera</h2>
+              <div class="camera-tabs">
+                <button class="tab active">C1</button>
+                <button class="tab">C2</button>
+                <button class="tab">C3</button>
+                <button class="tab">C4</button>
+                <button class="tab">C5</button>
+              </div>
+              <button class="more-btn">⋯</button>
+            </div>
+            <div class="camera-feed">
+              <img
+                src="https://csspicker.dev/api/image/?q=modern+living+room+interior&image_type=photo"
+                alt="Living Room Camera"
+              />
+              <div class="camera-overlay">
+                <div class="timestamp">12/05/2018 09:43AM</div>
+                <div class="recording-status">
+                  <div class="recording-dot"></div>
+                  Recording
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Consumption by Room -->
+          <div class="consumption-room">
+            <div class="section-header">
+              <h2>Consumption by room</h2>
+              <button class="more-btn">⋯</button>
+            </div>
+            <div class="donut-chart">
+              <div class="chart-center">
+                <div class="watts">304.5</div>
+                <div class="label">WATTS</div>
+              </div>
+              <svg width="200" height="200" viewBox="0 0 200 200">
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="80"
+                  fill="none"
+                  stroke="#2A3F5F"
+                  stroke-width="20"
+                />
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="80"
+                  fill="none"
+                  stroke="#4CAF50"
+                  stroke-width="20"
+                  stroke-dasharray="80.42 421.58"
+                  stroke-dashoffset="0"
+                  transform="rotate(-90 100 100)"
+                />
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="80"
+                  fill="none"
+                  stroke="#FF9800"
+                  stroke-width="20"
+                  stroke-dasharray="110.56 391.44"
+                  stroke-dashoffset="-80.42"
+                  transform="rotate(-90 100 100)"
+                />
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="80"
+                  fill="none"
+                  stroke="#F44336"
+                  stroke-width="20"
+                  stroke-dasharray="55.28 446.72"
+                  stroke-dashoffset="-191"
+                  transform="rotate(-90 100 100)"
+                />
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="80"
+                  fill="none"
+                  stroke="#2196F3"
+                  stroke-width="20"
+                  stroke-dasharray="195.84 306.16"
+                  stroke-dashoffset="-246.28"
+                  transform="rotate(-90 100 100)"
+                />
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="80"
+                  fill="none"
+                  stroke="#9C27B0"
+                  stroke-width="20"
+                  stroke-dasharray="60.32 441.68"
+                  stroke-dashoffset="-442.12"
+                  transform="rotate(-90 100 100)"
+                />
+              </svg>
+            </div>
+            <div class="legend">
+              <div class="legend-item">
+                <div class="legend-color" style="background: #4caf50"></div>
+                <span>Living Room</span>
+                <span class="percentage">16%</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color" style="background: #ff9800"></div>
+                <span>Studio</span>
+                <span class="percentage">22%</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color" style="background: #f44336"></div>
+                <span>Luca's Bedroom</span>
+                <span class="percentage">11%</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color" style="background: #2196f3"></div>
+                <span>Garage</span>
+                <span class="percentage">39%</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color" style="background: #9c27b0"></div>
+                <span>Kitchen</span>
+                <span class="percentage">12%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Consumption by Day -->
+          <div class="consumption-day">
+            <div class="section-header">
+              <h2>Consumption by day</h2>
+              <button class="more-btn">⋯</button>
+            </div>
+            <div class="bar-chart">
+              <div class="bar" style="height: 60%"></div>
+              <div class="bar" style="height: 80%"></div>
+              <div class="bar" style="height: 70%"></div>
+              <div class="bar" style="height: 50%"></div>
+              <div class="bar" style="height: 40%"></div>
+              <div class="bar" style="height: 20%"></div>
+              <div class="bar" style="height: 30%"></div>
+            </div>
+            <div class="chart-labels">
+              <span>MON</span>
+              <span>TUE</span>
+              <span>WED</span>
+              <span>THU</span>
+              <span>FRI</span>
+              <span>SAT</span>
+              <span>SUN</span>
+            </div>
+            <button class="see-more">SEE MORE INFO</button>
+          </div>
+
+          <!-- Device Limit -->
+          <div class="device-limit">
+            <div class="section-header">
+              <h2>Device Limit</h2>
+              <button class="more-btn">⋯</button>
+            </div>
+            <div class="circular-progress">
+              <svg width="120" height="120" viewBox="0 0 120 120">
+                <circle
+                  cx="60"
+                  cy="60"
+                  r="50"
+                  fill="none"
+                  stroke="#2A3F5F"
+                  stroke-width="8"
+                />
+                <circle
+                  cx="60"
+                  cy="60"
+                  r="50"
+                  fill="none"
+                  stroke="#2196F3"
+                  stroke-width="8"
+                  stroke-dasharray="157 157"
+                  stroke-dashoffset="47.1"
+                  transform="rotate(-90 60 60)"
+                />
+              </svg>
+              <div class="progress-center">
+                <div class="number">10</div>
+                <div class="info-icon">ⓘ</div>
+              </div>
+            </div>
+            <button class="see-more">SEE MORE INFO</button>
+          </div>
+        </div>
+
+        <!-- Status by Units -->
+        <div class="status-section">
+          <div class="section-header">
+            <h2>Status by units</h2>
+            <button class="more-btn">⋯</button>
+          </div>
+          <div class="status-grid">
+            <div class="status-card">
+              <div class="status-label">ON LIVINGROOM</div>
+              <div class="status-value">745 <span class="unit">W</span></div>
+            </div>
+            <div class="status-card">
+              <div class="status-label">OUTSIDE</div>
+              <div class="status-value">20.0 <span class="unit">°C</span></div>
+            </div>
+            <div class="status-card">
+              <div class="status-label">INSIDE</div>
+              <div class="status-value">15.3 <span class="unit">°C</span></div>
+            </div>
+            <div class="status-card">
+              <div class="status-label">WATER</div>
+              <div class="status-value">494 <span class="unit">CF</span></div>
+            </div>
+            <div class="status-card">
+              <div class="status-label">INTERNET</div>
+              <div class="status-value">
+                45.3 <span class="unit">MBPS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Device Cards -->
+        <div class="device-cards">
+          <div class="device-card">
+            <div class="device-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect
+                  x="2"
+                  y="3"
+                  width="20"
+                  height="14"
+                  rx="2"
+                  ry="2"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <line
+                  x1="8"
+                  y1="21"
+                  x2="16"
+                  y2="21"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div class="device-info">
+              <h3>Outlets</h3>
+              <p>Active since</p>
+              <span class="date">June 28, 2017</span>
+            </div>
+            <div class="device-status active"></div>
+          </div>
+
+          <div class="device-card">
+            <div class="device-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M23 19A2 2 0 0 1 21 21H3A2 2 0 0 1 1 19V8A2 2 0 0 1 3 6H7L9 4H15L17 6H21A2 2 0 0 1 23 8V19Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="12"
+                  cy="13"
+                  r="4"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div class="device-info">
+              <h3>Camera</h3>
+              <p>Active since</p>
+              <span class="date">June 28, 2017</span>
+            </div>
+            <div class="device-status"></div>
+          </div>
+
+          <div class="device-card">
+            <div class="device-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <line
+                  x1="12"
+                  y1="1"
+                  x2="12"
+                  y2="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <line
+                  x1="12"
+                  y1="21"
+                  x2="12"
+                  y2="23"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div class="device-info">
+              <h3>Lights</h3>
+              <p>Active since</p>
+              <span class="date">June 28, 2017</span>
+            </div>
+            <div class="device-status active"></div>
+          </div>
+
+          <div class="device-card">
+            <div class="device-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M5 12.55A11 11 0 0 1 14.08 2A11 11 0 0 1 12.55 19A11 11 0 0 1 2 14.08A11 11 0 0 1 5 12.55Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M8.21 13.89L7 23L13 20L17 23L15.79 13.88"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div class="device-info">
+              <h3>Wifi</h3>
+              <p>Active since</p>
+              <span class="date">June 28, 2017</span>
+            </div>
+            <div class="device-status"></div>
+          </div>
+
+          <div class="device-card">
+            <div class="device-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M14 14.76V3.5A2.5 2.5 0 0 0 11.5 1A2.5 2.5 0 0 0 9 3.5V14.76A4.5 4.5 0 1 0 14 14.76Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <line
+                  x1="11.5"
+                  y1="7"
+                  x2="11.5"
+                  y2="11"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div class="device-info">
+              <h3>Thermostats</h3>
+              <p>Active since</p>
+              <span class="date">June 28, 2017</span>
+            </div>
+            <div class="device-status active"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
